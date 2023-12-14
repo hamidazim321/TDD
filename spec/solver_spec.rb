@@ -32,8 +32,25 @@ describe Solver do
   context '#fizzbuzz' do
     it 'should handle large values on N without crashing' do
       result = @solver.fizzbuzz(1_000_000)
-
       expect(result).to eq 'buzz'
+    end
+
+    it 'Should return fizz for multiple of 3' do
+      result = @solver.fizzbuzz(6)
+      
+      expect(result).to eq('fizz')
+    end
+
+    it 'Should return buzz for multiple of 5' do
+      result = @solver.fizzbuzz(10)
+      
+      expect(result).to eq('buzz')
+    end
+
+    it 'Should return fizzbuzz for multiple of both 3 and 5' do
+      result = @solver.fizzbuzz(15)
+      
+      expect(result).to eq('fizzbuzz')
     end
   end
 end
