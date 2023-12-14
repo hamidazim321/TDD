@@ -6,14 +6,22 @@ describe Solver do
     @solver = Solver.new
   end
 
-  context 'Initialize Solver' do
+  context '#factorial' do
     it 'Test for factorial method here' do
-    end
 
-    it 'Test for factorial method here' do
     end
+  end
 
-    it 'Test for factorial method here' do
+  context "#reverse" do
+    it 'Test for reverse method here' do
+
+    end
+  end
+
+  context "#fizzbuzz" do
+    it 'Test for fizzbuzz method here' do
+
     end
   end
 end
+
