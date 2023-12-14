@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # the Solver class provides methods for factorial, string reverse and fizzbuzz listing
 class Solver
   def factorial(number)
