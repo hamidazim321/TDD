@@ -20,9 +20,7 @@ describe Solver do
     end
 
     it "Should raise ArgumentError if a negative integer is given" do
-      error = @solver.factorial(-1)
-
-      expect{ error }.to raise_error(ArgumentError)
+      expect{ @solver.factorial(-1) }.to raise_error(ArgumentError)
     end
   end
 
