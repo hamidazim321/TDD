@@ -10,6 +10,10 @@ describe Solver do
       factorial = @solver.factorial(3)
       expect(factorial).to eq(6)
     end
+    it 'Should return 1 as factorial of 0' do
+      factorial = @solver.factorial(0)
+      expect(factorial).to eq(1)
+    end
     it 'Should raise ArgumentError if a negative integer is given' do
       expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
     end
@@ -38,6 +42,10 @@ describe Solver do
     it 'Should return fizzbuzz for multiple of both 3 and 5' do
       result = @solver.fizzbuzz(15)
       expect(result).to eq('fizzbuzz')
+    end
+    it 'Should return string version of the number if number if indivisable by 3 or 5' do
+      result = @solver.fizzbuzz(13)
+      expect(result).to eq('13')
     end
   end
 end
