@@ -25,8 +25,11 @@ describe Solver do
   end
 
   context "#reverse" do
-    it 'Test for reverse method here' do
+    it 'Should return olleh as the reverse of hello' do
+      string = 'hello'
+      reversed_string = @solver.reverse(string)
 
+      expect(reversed_string).to eq('olleh')
     end
   end
 
