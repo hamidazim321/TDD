@@ -1,15 +1,14 @@
+# frozen_string_literal: true
+
+# the Solver class provides methods for factorial, string reverse and fizzbuzz listing
 class Solver
-  def factorial(n)
-    if n == 0
+  def factorial(number)
+    if number.zero?
       1
-    elsif n < 0
+    elsif number.negative?
       raise ArgumentError
     else
-      result = 1
-      (1..n).each do |num|
-        result *= num
-      end
-      result
+      number * factorial(number - 1)
     end
   end
 
@@ -17,12 +16,12 @@ class Solver
     str.reverse
   end
 
-  def fizzbuzz(n)
-    if n % 3 == 0 && n % 5 == 0
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
       'fizzbuzz'
-    elsif n % 3 == 0
+    elsif (num % 3).zero?
       'fizz'
-    elsif n % 5 == 0
+    elsif (num % 5).zero?
       'buzz'
     else
       n.to_s
