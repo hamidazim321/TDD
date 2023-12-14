@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'solver'
+require_relative '../solver'
 
 describe Solver do
   before(:each) do
@@ -7,8 +7,22 @@ describe Solver do
   end
 
   context '#factorial' do
-    it 'Test for factorial method here' do
+    it 'Should return 6 as factorial of 3' do
+      factorial = @solver.factorial(3)
+      
+      expect(factorial).to eq(6)
+    end
 
+    it "Should return 1 as factorial of 0" do 
+      factorial = @solver.factorial(0)
+
+      expect(factorial).to eq(1)
+    end
+
+    it "Should raise ArgumentError if a negative integer is given" do
+      error = @solver.factorial(-1)
+
+      expect{ error }.to raise_error(ArgumentError)
     end
   end
 
