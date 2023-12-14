@@ -1,7 +1,7 @@
 class Solver
   def factorial(n)
     if n == 0
-      return 1
+      1
     elsif n < 0
       raise ArgumentError
     else
@@ -9,23 +9,23 @@ class Solver
       (1..n).each do |num|
         result *= num
       end
-      return result
+      result
     end
   end
 
   def reverse(str)
-    return str.reverse
+    str.reverse
   end
 
   def fizzbuzz(n)
     if n % 3 == 0 && n % 5 == 0
-      return 'fizzbuzz'
+      'fizzbuzz'
     elsif n % 3 == 0
-      return 'fizz'
+      'fizz'
     elsif n % 5 == 0
-      return 'buzz'
+      'buzz'
     else
-      return n.to_s
+      n.to_s
     end
   end
 end
