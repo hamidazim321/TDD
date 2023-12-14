@@ -13,7 +13,9 @@ class Solver
     end
   end
 
-  def reverse; end
+  def reverse(str)
+    return str.reverse
+  end
 
   def fizzbuzz; end
 end
