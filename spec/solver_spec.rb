@@ -9,11 +9,11 @@ describe Solver do
   context '#factorial' do
     it 'Should return 6 as factorial of 3' do
       factorial = @solver.factorial(3)
-      
+
       expect(factorial).to eq(6)
     end
 
-    it "Should return 1 as factorial of 0" do 
+    it "Should return 1 as factorial of 0" do
       factorial = @solver.factorial(0)
 
       expect(factorial).to eq(1)
@@ -34,9 +34,11 @@ describe Solver do
   end
 
   context "#fizzbuzz" do
-    it 'Test for fizzbuzz method here' do
+    it 'should handle large values on N without crashing' do
+      N = 1000000
+      result = @solver.fizzbuzz(N)
 
+      expect(result).to eq 'buzz'
     end
   end
 end
-
