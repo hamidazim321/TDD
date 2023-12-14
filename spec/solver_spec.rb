@@ -13,18 +13,18 @@ describe Solver do
       expect(factorial).to eq(6)
     end
 
-    it "Should return 1 as factorial of 0" do
+    it 'Should return 1 as factorial of 0' do
       factorial = @solver.factorial(0)
 
       expect(factorial).to eq(1)
     end
 
-    it "Should raise ArgumentError if a negative integer is given" do
-      expect{ @solver.factorial(-1) }.to raise_error(ArgumentError)
+    it 'Should raise ArgumentError if a negative integer is given' do
+      expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
     end
   end
 
-  context "#reverse" do
+  context '#reverse' do
     it 'Should return olleh as the reverse of hello' do
       string = 'hello'
       reversed_string = @solver.reverse(string)
@@ -33,9 +33,9 @@ describe Solver do
     end
   end
 
-  context "#fizzbuzz" do
+  context '#fizzbuzz' do
     it 'should handle large values on N without crashing' do
-      N = 1000000
+      N = 1_000_000
       result = @solver.fizzbuzz(N)
 
       expect(result).to eq 'buzz'
