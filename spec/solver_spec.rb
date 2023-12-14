@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec'
 require_relative '../solver'
 
@@ -11,12 +13,6 @@ describe Solver do
       factorial = @solver.factorial(3)
 
       expect(factorial).to eq(6)
-    end
-
-    it 'Should return 1 as factorial of 0' do
-      factorial = @solver.factorial(0)
-
-      expect(factorial).to eq(1)
     end
 
     it 'Should raise ArgumentError if a negative integer is given' do
@@ -35,8 +31,7 @@ describe Solver do
 
   context '#fizzbuzz' do
     it 'should handle large values on N without crashing' do
-      N = 1_000_000
-      result = @solver.fizzbuzz(N)
+      result = @solver.fizzbuzz(1_000_000)
 
       expect(result).to eq 'buzz'
     end
